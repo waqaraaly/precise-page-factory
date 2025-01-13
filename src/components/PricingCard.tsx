@@ -10,16 +10,16 @@ interface PricingCardProps {
 
 const PricingCard = ({ title, description, price, features }: PricingCardProps) => {
   return (
-    <div className="pricing-card-gradient rounded-3xl p-8 text-white flex flex-col h-full">
+    <div className="bg-[#F1F0FB] rounded-3xl p-8 text-gray-800 flex flex-col h-full border border-gray-200">
       <div className="mb-8">
         <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-300">{description}</p>
+        <p className="text-gray-600">{description}</p>
       </div>
       
       <div className="mb-8">
         <div className="flex items-baseline">
           <span className="text-4xl font-bold">${price}</span>
-          <span className="text-gray-300 ml-2">/per month</span>
+          <span className="text-gray-600 ml-2">/per month</span>
         </div>
       </div>
       
@@ -28,14 +28,14 @@ const PricingCard = ({ title, description, price, features }: PricingCardProps) 
         <ul className="space-y-4">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center gap-3">
-              <Check className="h-5 w-5 text-blue-400" />
-              <span className="text-gray-300">{feature}</span>
+              <Check className="h-5 w-5 text-blue-600" />
+              <span className="text-gray-600">{feature}</span>
             </li>
           ))}
         </ul>
       </div>
       
-      <Button variant="secondary" className="mt-8 w-full bg-white text-[#222226] hover:bg-gray-100">
+      <Button variant="default" className="mt-8 w-full bg-[#222226] hover:bg-[#2a2a30] text-white">
         Get Started
       </Button>
     </div>
