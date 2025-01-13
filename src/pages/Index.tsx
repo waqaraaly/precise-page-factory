@@ -23,7 +23,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <div className="relative h-[500px] flex items-center justify-center">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/0b3724ad-d493-45e7-bbe9-1d56ca251aeb.png')] bg-cover bg-center" />
         <div className="absolute inset-0 hero-gradient" />
         <div className="relative text-center text-white px-4">
           <h1 className="text-5xl font-bold mb-4">
