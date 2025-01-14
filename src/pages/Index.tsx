@@ -78,7 +78,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className={`transition-transform duration-300 ${billingType === "monthly" ? "scale-105" : "scale-100"}`}>
               <PricingCard
-                title="Basic"
+                title="Monthly"
                 description="Best for personal use."
                 price={150}
                 features={monthlyFeatures}
@@ -86,7 +86,7 @@ const Index = () => {
             </div>
             <div className={`transition-transform duration-300 ${billingType === "lumpsum" ? "scale-105" : "scale-100"}`}>
               <PricingCard
-                title="Lumpsum"
+                title="Yearly"
                 description="Best for personal use."
                 price={20}
                 features={lumpsumFeatures}
