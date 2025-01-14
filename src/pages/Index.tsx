@@ -7,14 +7,23 @@ import { Button } from "../components/ui/button";
 const Index = () => {
   const [billingType, setBillingType] = useState<"monthly" | "lumpsum">("monthly");
 
-  const features = [
+  const monthlyFeatures = [
+    "Design and Development",
+    "Basic SEO setup",
+    "Mobile-Responsive & Optimized for All Devices",
+    "Includes Hosting",
+    "5 Pages Included ($50 per page after 5)",
+    "Add a Blog ($150 additional)",
+    "Unlimited Edits",
+    "Lifetime Updates"
+  ];
+
+  const lumpsumFeatures = [
     "What will you get",
     "What will you get",
     "What will you get",
     "What will you get",
-    "What will you get",
-    "What will you get",
-    "What will you get",
+    "What will you get"
   ];
 
   return (
@@ -71,8 +80,8 @@ const Index = () => {
               <PricingCard
                 title="Basic"
                 description="Best for personal use."
-                price={20}
-                features={features}
+                price={150}
+                features={monthlyFeatures}
               />
             </div>
             <div className={`transition-transform duration-300 ${billingType === "lumpsum" ? "scale-105" : "scale-100"}`}>
@@ -80,7 +89,7 @@ const Index = () => {
                 title="Lumpsum"
                 description="Best for personal use."
                 price={20}
-                features={features.slice(0, 5)}
+                features={lumpsumFeatures}
               />
             </div>
           </div>
