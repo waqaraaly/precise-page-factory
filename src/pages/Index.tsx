@@ -71,12 +71,16 @@ const Index = () => {
               onClick={() => setBillingType("lumpsum")}
               className={billingType === "lumpsum" ? "bg-[#222226]" : ""}
             >
-              Lumpsum
+              Yearly
             </Button>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className={`transition-transform duration-300 ${billingType === "monthly" ? "scale-105" : "scale-100"}`}>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto relative">
+            <div className={`transition-all duration-300 ${
+              billingType === "monthly" 
+                ? "scale-105 z-20" 
+                : "scale-95 opacity-80 z-10"
+            }`}>
               <PricingCard
                 title="Monthly"
                 description="Stay flexible with no long-term contracts. Great for testing your website's needs."
@@ -84,7 +88,11 @@ const Index = () => {
                 features={monthlyFeatures}
               />
             </div>
-            <div className={`transition-transform duration-300 ${billingType === "lumpsum" ? "scale-105" : "scale-100"}`}>
+            <div className={`transition-all duration-300 ${
+              billingType === "lumpsum" 
+                ? "scale-105 z-20" 
+                : "scale-95 opacity-80 z-10"
+            }`}>
               <PricingCard
                 title="Yearly"
                 description="Stay flexible with no long-term contracts. Great for testing your website's needs."
