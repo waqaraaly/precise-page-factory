@@ -79,7 +79,7 @@ const Index = () => {
             <div className={`transition-transform duration-300 ${billingType === "monthly" ? "scale-105" : "scale-100"}`}>
               <PricingCard
                 title="Monthly"
-                description="Best for personal use."
+                description="Stay flexible with no long-term contracts. Great for testing your website's needs."
                 price={150}
                 features={monthlyFeatures}
               />
@@ -87,7 +87,7 @@ const Index = () => {
             <div className={`transition-transform duration-300 ${billingType === "lumpsum" ? "scale-105" : "scale-100"}`}>
               <PricingCard
                 title="Yearly"
-                description="Best for personal use."
+                description="Stay flexible with no long-term contracts. Great for testing your website's needs."
                 price={20}
                 features={lumpsumFeatures}
               />
