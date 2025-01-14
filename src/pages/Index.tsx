@@ -62,14 +62,22 @@ const Index = () => {
             <Button
               variant={billingType === "monthly" ? "default" : "outline"}
               onClick={() => setBillingType("monthly")}
-              className={billingType === "monthly" ? "bg-[#222226]" : ""}
+              className={`px-8 py-6 text-base font-semibold shadow-lg transition-all duration-300 hover:scale-105 ${
+                billingType === "monthly"
+                  ? "bg-gradient-to-r from-[#8B5CF6] to-[#6E59A5] hover:from-[#7E69AB] hover:to-[#6E59A5] text-white border-none"
+                  : "border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#E5DEFF] hover:text-[#6E59A5]"
+              }`}
             >
               Monthly
             </Button>
             <Button
               variant={billingType === "lumpsum" ? "default" : "outline"}
               onClick={() => setBillingType("lumpsum")}
-              className={billingType === "lumpsum" ? "bg-[#222226]" : ""}
+              className={`px-8 py-6 text-base font-semibold shadow-lg transition-all duration-300 hover:scale-105 ${
+                billingType === "lumpsum"
+                  ? "bg-gradient-to-r from-[#8B5CF6] to-[#6E59A5] hover:from-[#7E69AB] hover:to-[#6E59A5] text-white border-none"
+                  : "border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#E5DEFF] hover:text-[#6E59A5]"
+              }`}
             >
               Yearly
             </Button>
